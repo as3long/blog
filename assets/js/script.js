@@ -119,7 +119,7 @@ function afterPjax() {
     }
   });
   
-	//Óï·¨¸ßÁÁ
+	//è¯­æ³•é«˜äº®
 	$('pre').each(function(){
 		$(this).addClass("prettyprint linenums");
 	});
