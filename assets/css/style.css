@@ -965,8 +965,8 @@ pre > code {
   padding: .25em .5em .1em;
   color: black;
   font: .85em Consolas, Monaco, 'Andale Mono', monospace;
-  background: #fafafa;
-  border: 1px solid #e5e8ec;
+  /*background: #fafafa;
+  border: 1px solid #e5e8ec;*/
   border-radius: .25em;
   vertical-align: 2px; }
 

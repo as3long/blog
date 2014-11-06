@@ -17,7 +17,7 @@ pre.prettyprint.linenums {
 }
 .prettyprint.linenums ol,
 pre.prettyprint.linenums ol {
-    margin: 0 0 0 33px; 
+    margin: 0; 
 }
 .prettyprint.linenums ol li,
 pre.prettyprint.linenums ol li {
