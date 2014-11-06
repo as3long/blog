@@ -1,6 +1,6 @@
-¸Ã´úÂëÖĞµÄClassÀ´×ÔinfoQµÄÎÄÕÂ
-[JavaScriptµÄÊµÀı»¯Óë¼Ì³Ğ£ºÇëÍ£Ö¹Ê¹ÓÃnew¹Ø¼ü×Ö](http://www.infoq.com/cnarticlesjavascript-instantiation-and-inheritance)
-ÏÂÃæÊÇĞŞ¸ÄºóµÄ´úÂë£¬ÔÚcreate·½·¨ÖĞÔö¼ÓÁËÉî¶È¸´ÖÆµÄ¹¦ÄÜ¡£
+è¯¥ä»£ç ä¸­çš„Classæ¥è‡ªinfoQçš„æ–‡ç« 
+[JavaScriptçš„å®ä¾‹åŒ–ä¸ç»§æ‰¿ï¼šè¯·åœæ­¢ä½¿ç”¨newå…³é”®å­—](http://www.infoq.com/cnarticlesjavascript-instantiation-and-inheritance)
+ä¸‹é¢æ˜¯ä¿®æ”¹åçš„ä»£ç ï¼Œåœ¨createæ–¹æ³•ä¸­å¢åŠ äº†æ·±åº¦å¤åˆ¶çš„åŠŸèƒ½ã€‚
 ```javascript
 var clone = function(sObj) {
 		if (typeof sObj !== object) {
