@@ -5,24 +5,23 @@ title: "深度复制的功能Class"
 该代码中的Class来自infoQ的文章
 [JavaScript的实例化与继承：请停止使用new关键字](http://www.infoq.com/cnarticlesjavascript-instantiation-and-inheritance)
 下面是修改后的代码，在create方法中增加了深度复制的功能。
-```javascript
-var clone = function(sObj) {
-		if (typeof sObj !== object) {
-			return sObj;
-		}
-		if(sObj == null){
-			return null;
-		}
-		var s = {};
-		if (sObj instanceof Array) {
-			s = [];
-		}
-		for (var i in sObj) {
-			s[i] = clone(sObj[i]);
-		}
-		return s;
-	}
 
+	var clone = function(sObj) {
+			if (typeof sObj !== object) {
+				return sObj;
+			}
+			if(sObj == null){
+				return null;
+			}
+			var s = {};
+			if (sObj instanceof Array) {
+				s = [];
+			}
+			for (var i in sObj) {
+				s[i] = clone(sObj[i]);
+			}
+			return s;
+		}
 	function Class() {}
 	Class.extend = function extend(props) {
 		var prototype = new this();
@@ -60,4 +59,3 @@ var clone = function(sObj) {
 		}
 		return Class;
 	}
-```
