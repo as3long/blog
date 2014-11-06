@@ -14,27 +14,28 @@ categories:
 ### 修改后的代码
 
 	var clone = function(sObj) {
-			if (typeof sObj !== object) {
-				return sObj;
-			}
-			if(sObj == null){
-				return null;
-			}
-			var s = {};
-			if (sObj instanceof Array) {
-				s = [];
-			}
-			for (var i in sObj) {
-				s[i] = clone(sObj[i]);
-			}
-			return s;
+		if (typeof sObj !== "object") {
+			return sObj;
 		}
+		if(sObj == null){
+			return null;
+		}
+		var s = {};
+		if (sObj instanceof Array) {
+			s = [];
+		}
+		for (var i in sObj) {
+			s[i] = clone(sObj[i]);
+		}
+		return s;
+	}
+
 	function Class() {}
 	Class.extend = function extend(props) {
 		var prototype = new this();
 		var _super = this.prototype;
 		for (var name in props) {
-			if (typeof props[name] == function && typeof _super[name] == function) {
+			if (typeof props[name] == "function" && typeof _super[name] == "function") {
 				prototype[name] = (function(super_fn, fn) {
 					return function() {
 						var tmp = this.callSuper;
@@ -53,16 +54,18 @@ categories:
 		}
 
 		function Class() {}
-		Class.prototype = prototype;
-		Class.prototype.constructor = Class;
-		Class.extend = extend;
-		Class.create = Class.prototype.create = function() {
-			var instance = new this();
-			instance = clone(prototype);
-			if (instance.init) {
-				instance.init.apply(instance, arguments);
+			Class.prototype = prototype;
+			Class.prototype.constructor = Class;
+			Class.extend = extend;
+			Class.create = Class.prototype.create = function() {
+				var instance = new this();
+				instance = clone(prototype);
+				if (instance.init) {
+					instance.init.apply(instance, arguments);
+				}
+				return instance;
 			}
-			return instance;
+			return Class;
 		}
 		return Class;
-	}
+	});
