@@ -120,8 +120,8 @@ function afterPjax() {
   });
   
 	//语法高亮
-	$('pre').each(function(){
-		$(this).addClass("prettyprint linenums");
+	$('code,pre').each(function(){
+		$(this).addClass("prettyprint linenums").attr('style', 'overflow:auto');
 	});
 	window.prettyPrint && prettyPrint();
   
