@@ -4,7 +4,7 @@ title: "深度复制的功能Class"
 tags:
     -JavaScript
 categories:
-    -JavaScript
+    javascript
 ---
 该代码中的Class来自infoQ的文章
 [JavaScript的实例化与继承：请停止使用new关键字](http://www.infoq.com/cnarticlesjavascript-instantiation-and-inheritance)
