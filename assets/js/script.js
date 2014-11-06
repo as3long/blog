@@ -118,7 +118,13 @@ function afterPjax() {
       toc.append('<li class="post__toc-li post__toc-h3"><a href="#' + $(this).attr('id') + '" class="js-anchor-link">' + $(this).text() + '</a></li>');
     }
   });
-
+  
+	//”Ô∑®∏ﬂ¡¡
+	$('pre').each(function(){
+		$(this).addClass("prettyprint linenums");
+	});
+	window.prettyPrint && prettyPrint();
+  
   // Smooth scrolling
   $('.js-anchor-link').on('click', function() {
     var target = $(this.hash);
