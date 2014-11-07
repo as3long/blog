@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>GTween_test</title>
+		<style type="text/css">
+			.demo{
+				width: 10px;
+				height: 10px;
+				position: relative;
+				background-color: red;
+				margin-top: 2px;
+				left: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="demo" id="demo1"></div>
+		<div class="demo" id="demo2"></div>
+		<div class="demo" id="demo3"></div>
+		<div class="demo" id="demo4"></div>
+		<div class="demo" id="demo5"></div>
+		<div class="demo" id="demo6"></div>
+		<div class="demo" id="demo7"></div>
+		<div class="demo" id="demo8"></div>
+		<div class="demo" id="demo9"></div>
+		<div class="demo" id="demo10"></div>
+		<div class="demo" id="demo11"></div>
+		<div class="demo" id="demo12"></div>
+		<div class="demo" id="demo13"></div>
+		<div class="demo" id="demo14"></div>
+		<div class="demo" id="demo15"></div>
+		<div class="demo" id="demo16"></div>
+		<div class="demo" id="demo17"></div>
+		<div class="demo" id="demo18"></div>
+		<div class="demo" id="demo19"></div>
+		<div class="demo" id="demo20"></div>
+		<div class="demo" id="demo21"></div>
+		<div class="demo" id="demo22"></div>
+		<div class="demo" id="demo23"></div>
+		<div class="demo" id="demo24"></div>
+		<div class="demo" id="demo25"></div>
+		<div class="demo" id="demo26"></div>
+		<div class="demo" id="demo27"></div>
+		<div class="demo" id="demo28"></div>
+		<div class="demo" id="demo29"></div>
+		<div class="demo" id="demo30"></div>
+		<script src="js/GTween-almond-built.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var GTween=require("com/as3long/motion/GTween");
+			var AllEase=require("com/as3long/motion/easing/AllEase");
+			var getDemo=function(id){
+				var demo=document.getElementById(id);
+				demo.dataLeft=100;
+				return demo;
+			}
+			var onChange=function(tween){
+				tween.target.style.left=tween.target.dataLeft+"px";
+			}
+			GTween.staticInit();
+			GTween.create(getDemo("demo1"),5,{dataLeft:1024},{ease:AllEase.Back.easeInOut,onChange:onChange});
+			GTween.create(getDemo("demo2"),5,{dataLeft:1024},{ease:AllEase.Back.easeIn,onChange:onChange});
+			GTween.create(getDemo("demo3"),5,{dataLeft:1024},{ease:AllEase.Back.easeOut,onChange:onChange});
+			GTween.create(getDemo("demo4"),5,{dataLeft:1024},{ease:AllEase.Bounce.easeInOut,onChange:onChange});
+			GTween.create(getDemo("demo5"),5,{dataLeft:1024},{ease:AllEase.Bounce.easeIn,onChange:onChange});
+			GTween.create(getDemo("demo6"),5,{dataLeft:1024},{ease:AllEase.Bounce.easeOut,onChange:onChange});
+			GTween.create(getDemo("demo7"),5,{dataLeft:1024},{ease:AllEase.Circular.easeInOut,onChange:onChange});
+			GTween.create(getDemo("demo8"),5,{dataLeft:1024},{ease:AllEase.Circular.easeIn,onChange:onChange});
+			GTween.create(getDemo("demo9"),5,{dataLeft:1024},{ease:AllEase.Circular.easeOut,onChange:onChange});
+			GTween.create(getDemo("demo10"),5,{dataLeft:1024},{ease:AllEase.Cubic.easeInOut,onChange:onChange});
+			GTween.create(getDemo("demo11"),5,{dataLeft:1024},{ease:AllEase.Cubic.easeIn,onChange:onChange});
+			GTween.create(getDemo("demo12"),5,{dataLeft:1024},{ease:AllEase.Cubic.easeOut,onChange:onChange});
+			GTween.create(getDemo("demo13"),5,{dataLeft:1024},{ease:AllEase.Elastic.easeInOut,onChange:onChange});
+			GTween.create(getDemo("demo14"),5,{dataLeft:1024},{ease:AllEase.Elastic.easeIn,onChange:onChange});
+			GTween.create(getDemo("demo15"),5,{dataLeft:1024},{ease:AllEase.Elastic.easeOut,onChange:onChange});
+			GTween.create(getDemo("demo16"),5,{dataLeft:1024},{ease:AllEase.Exponential.easeInOut,onChange:onChange});
+			GTween.create(getDemo("demo17"),5,{dataLeft:1024},{ease:AllEase.Exponential.easeIn,onChange:onChange});
+			GTween.create(getDemo("demo18"),5,{dataLeft:1024},{ease:AllEase.Exponential.easeOut,onChange:onChange});
+			GTween.create(getDemo("demo19"),5,{dataLeft:1024},{ease:AllEase.Quadratic.easeInOut,onChange:onChange});
+			GTween.create(getDemo("demo20"),5,{dataLeft:1024},{ease:AllEase.Quadratic.easeIn,onChange:onChange});
+			GTween.create(getDemo("demo21"),5,{dataLeft:1024},{ease:AllEase.Quadratic.easeOut,onChange:onChange});
+			GTween.create(getDemo("demo22"),5,{dataLeft:1024},{ease:AllEase.Quartic.easeInOut,onChange:onChange});
+			GTween.create(getDemo("demo23"),5,{dataLeft:1024},{ease:AllEase.Quartic.easeIn,onChange:onChange});
+			GTween.create(getDemo("demo24"),5,{dataLeft:1024},{ease:AllEase.Quartic.easeOut,onChange:onChange});
+			GTween.create(getDemo("demo25"),5,{dataLeft:1024},{ease:AllEase.Quintic.easeInOut,onChange:onChange});
+			GTween.create(getDemo("demo26"),5,{dataLeft:1024},{ease:AllEase.Quintic.easeIn,onChange:onChange});
+			GTween.create(getDemo("demo27"),5,{dataLeft:1024},{ease:AllEase.Quintic.easeOut,onChange:onChange});
+			GTween.create(getDemo("demo28"),5,{dataLeft:1024},{ease:AllEase.Sine.easeInOut,onChange:onChange});
+			GTween.create(getDemo("demo29"),5,{dataLeft:1024},{ease:AllEase.Sine.easeIn,onChange:onChange});
+			GTween.create(getDemo("demo30"),5,{dataLeft:1024},{ease:AllEase.Sine.easeOut,onChange:onChange});
+			var Class=require("Class");
+			
+		</script>
+	</body>
+</html>

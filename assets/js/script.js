@@ -125,6 +125,8 @@ function afterPjax() {
 	});
 	window.prettyPrint && prettyPrint();
   
+    DUOSHUO.EmbedThread($(".ds-thread")[0]);
+  
   // Smooth scrolling
   $('.js-anchor-link').on('click', function() {
     var target = $(this.hash);
