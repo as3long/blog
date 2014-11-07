@@ -125,7 +125,9 @@ function afterPjax() {
 	});
 	window.prettyPrint && prettyPrint();
   
-    DUOSHUO.EmbedThread($(".ds-thread")[0]);
+    if(DUOSHUO!=null){
+        DUOSHUO.EmbedThread($(".ds-thread")[0]);
+    }
   
   // Smooth scrolling
   $('.js-anchor-link').on('click', function() {
