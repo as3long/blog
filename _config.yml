@@ -1,2 +1,4 @@
 pygments: false
 markdown: kramdown
+kramdown:
+  input: GFM
