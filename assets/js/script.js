@@ -125,7 +125,7 @@ function afterPjax() {
 	});
 	window.prettyPrint && prettyPrint();
   
-    if(DUOSHUO!=null){
+    if(window.DUOSHUO!=null){
         DUOSHUO.EmbedThread($(".ds-thread")[0]);
     }
   
