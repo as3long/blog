@@ -9,6 +9,7 @@ categories:
 
 [24种cubic-bezier缓动效果来自](https://github.com/modeset/underoos/blob/e44607a67052840479af09cb678815fa551bc1ce/app/assets/stylesheets/mixins/_timing-equations.sass)
 
+[动画效果,猛戳此处](http://underoos.modeset.com/styles.html#mixins-timing-equations)
 <p style="color:red;font-size:12px;">注：需要注意的是在手机端有部分手机cubic-bezier的值范围只能在0-1之前。部分手机支持负数和大于1的数！</p>
 
 - $ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53)
