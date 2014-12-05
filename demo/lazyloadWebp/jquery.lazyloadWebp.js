@@ -110,9 +110,9 @@
                         var elements_left = elements.length;
                         settings.appear.call(self, elements_left, settings);
                     }
+                    var original = webpSupport?$self.attr("data-" + settings.data_webpAttr):$self.attr("data-" + settings.data_attribute);
                     $("<img />")
                         .bind("load", function() {
-                            var original = webpSupport?$self.attr("data-" + settings.data_webpAttr):$self.attr("data-" + settings.data_attribute);
                             $self.hide();
                             if ($self.is("img")) {
                                 $self.attr("src", original);
@@ -134,7 +134,7 @@
                                 settings.load.call(self, elements_left, settings);
                             }
                         })
-                        .attr("src", $self.attr("data-" + settings.data_attribute));
+                        .attr("src",original);
                 }
             });
 
