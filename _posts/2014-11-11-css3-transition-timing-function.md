@@ -13,30 +13,30 @@ categories:
 
 <p style="color:red;font-size:12px;">注：需要注意的是在手机端有部分手机cubic-bezier的值范围只能在0-1之前。部分手机支持负数和大于1的数！</p>
 
-- $ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53)
-- $ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19)
-- $ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22)
-- $ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06)
-- $ease-in-sine: cubic-bezier(0.47, 0, 0.745, 0.715)
-- $ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035)
-- $ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.335)
-- $ease-in-back: cubic-bezier(0.600, -0.280, 0.735, 0.045)
-- $ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94)
-- $ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1)
-- $ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1)
-- $ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1)
-- $ease-out-sine: cubic-bezier(0.39, 0.575, 0.565, 1)
-- $ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1)
-- $ease-out-circ: cubic-bezier(0.075, 0.82, 0.165, 1)
-- $ease-out-back: cubic-bezier(0.175, 0.885, 0.320, 1.275)
-- $ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955)
-- $ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1)
-- $ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1)
-- $ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1)
-- $ease-in-out-sine: cubic-bezier(0.445, 0.05, 0.55, 0.95)
+- $ease-in-quad: cubic-bezier(.55,.085,.68,.53)
+- $ease-in-cubic: cubic-bezier(.55,.055,.675,.19)
+- $ease-in-quart: cubic-bezier(.895,.03,.685,.22)
+- $ease-in-quint: cubic-bezier(.755,.05,.855,.06)
+- $ease-in-sine: cubic-bezier(.47, 0,.745,.715)
+- $ease-in-expo: cubic-bezier(.95,.05,.795,.035)
+- $ease-in-circ: cubic-bezier(.6,.04,.98,.335)
+- $ease-in-back: cubic-bezier(.600, -.280,.735,.045)
+- $ease-out-quad: cubic-bezier(.25,.46,.45,.94)
+- $ease-out-cubic: cubic-bezier(.215,.61,.355, 1)
+- $ease-out-quart: cubic-bezier(.165,.84,.44, 1)
+- $ease-out-quint: cubic-bezier(.23, 1,.32, 1)
+- $ease-out-sine: cubic-bezier(.39,.575,.565, 1)
+- $ease-out-expo: cubic-bezier(.19, 1,.22, 1)
+- $ease-out-circ: cubic-bezier(.075,.82,.165, 1)
+- $ease-out-back: cubic-bezier(.175,.885,.320, 1.275)
+- $ease-in-out-quad: cubic-bezier(.455,.03,.515,.955)
+- $ease-in-out-cubic: cubic-bezier(.645,.045,.355, 1)
+- $ease-in-out-quart: cubic-bezier(.77, 0,.175, 1)
+- $ease-in-out-quint: cubic-bezier(.86, 0,.07, 1)
+- $ease-in-out-sine: cubic-bezier(.445,.05,.55,.95)
 - $ease-in-out-expo: cubic-bezier(1, 0, 0, 1)
-- $ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86)
-- $ease-in-out-back: cubic-bezier(0.680, -0.550, 0.265, 1.550)
+- $ease-in-out-circ: cubic-bezier(.785,.135,.15,.86)
+- $ease-in-out-back: cubic-bezier(.680, -.550,.265, 1.550)
 
 可以用下面这种方式实现渐进兼容
 
@@ -44,6 +44,36 @@ categories:
 transition:all 2s cubic-bezier(1, 0, 0, 1);
 -moz-transition:all 2s cubic-bezier(1, 0, 0, 1);	/* Firefox 4 */
 -webkit-transition:all 2s cubic-bezier(1, 0, 0, 1);	/* Safari 和 Chrome */
--webkit-transition-timing-function:cubic-bezier(0.680, -0.550, 0.265, 1.550);/*单独写可以实现渐进兼容*/
-transition-timing-function:cubic-bezier(0.680, -0.550, 0.265, 1.550);
+-webkit-transition-timing-function:cubic-bezier(.680, -.550,.265, 1.550);/*单独写可以实现渐进兼容*/
+transition-timing-function:cubic-bezier(.680, -.550,.265, 1.550);
+```
+
+复制到[http://cubic-bezier.com](http://cubic-bezier.com)
+```json
+{
+"ease-in-quad":".55,.085,.68,.53",
+"ease-in-cubic":".55,.055,.675,.19",
+"ease-in-quart":".895,.03,.685,.22",
+"ease-in-quint":".755,.05,.855,.06",
+"ease-in-sine":".47,0,.745,.715",
+"ease-in-expo":".95,.05,.795,.035",
+"ease-in-circ":".6,.04,.98,.335",
+"ease-in-back":".600, -.280,.735,.045",
+"ease-out-quad":".25,.46,.45,.94",
+"ease-out-cubic":".215,.61,.355, 1",
+"ease-out-quart":".165,.84,.44, 1",
+"ease-out-quint":".23, 1,.32, 1",
+"ease-out-sine":".39,.575,.565, 1",
+"ease-out-expo":".19, 1,.22, 1",
+"ease-out-circ":".075,.82,.165, 1",
+"ease-out-back":".175,.885,.320, 1.275",
+"ease-in-out-quad":".455,.03,.515,.955",
+"ease-in-out-cubic":".645,.045,.355, 1",
+"ease-in-out-quart":".77, 0,.175, 1",
+"ease-in-out-quint":".86, 0,.07, 1",
+"ease-in-out-sine":".445,.05,.55,.95",
+"ease-in-out-expo":"1, 0, 0, 1",
+"ease-in-out-circ":".785,.135,.15,.86",
+"ease-in-out-back":".680, -.550,.265, 1.550"
+}
 ```
