@@ -49,7 +49,11 @@ transition-timing-function:cubic-bezier(.680, -.550,.265, 1.550);
 ```
 
 复制到[http://cubic-bezier.com](http://cubic-bezier.com)
+<<<<<<< HEAD
 ```javascript
+=======
+```json
+>>>>>>> 32d0e3f2dff2c467771fc873c56d746c2f004a1d
 {
 "ease-in-quad":".55,.085,.68,.53",
 "ease-in-cubic":".55,.055,.675,.19",
