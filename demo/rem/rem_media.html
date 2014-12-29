@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>rem+媒体查询</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .main{
+            margin: 0 auto;
+            width: 16rem;
+            height: 5rem;
+            background: #aa3;
+            color: #fff;
+            font-size: 3rem;
+            text-align: center;
+        }
+        html {
+            font-size: 125%;
+        }
+        @media (min-width: 320px) and (max-width: 340px) {
+            html {
+                font-size: 125%;
+            }
+        }
+        @media (min-width: 340px) and (max-width: 360px) {
+            html {
+                font-size: 132.82%;
+            }
+        }
+        @media (min-width: 360px) and (max-width: 380px) {
+            html {
+                font-size: 140.62%;
+            }
+        }
+        @media (min-width: 380px) and (max-width: 400px) {
+            html {
+                font-size: 148.44%;
+            }
+        }
+        @media (min-width: 400px) and (max-width: 420px) {
+            html {
+                font-size: 156.26%;
+            }
+        }
+        @media (min-width: 420px) and (max-width: 440px) {
+            html {
+                font-size: 164.06%;
+            }
+        }
+        @media (min-width:440px) and (max-width: 640px) {
+            html {
+                font-size: 171.88%;
+            }
+        }
+    </style>
+</head>
+<body>
+   <div class="main">rem+media</div>
+</body>
+</html>

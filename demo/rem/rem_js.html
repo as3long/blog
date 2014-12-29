@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>rem+js</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .main{
+            margin: 0 auto;
+            width: 16rem;
+            height: 5rem;
+            background: #aa3;
+            color: #fff;
+            font-size: 3rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+   <div class="main">rem+js</div>
+    <script>
+        (function(win,doc){
+             var h;
+             win.addEventListener('resize',function() {
+              clearTimeout(h);
+              h = setTimeout(setUnitA, 300);
+            }, false);
+            win.addEventListener('pageshow',function(e) {
+                if (e.persisted) {
+                    clearTimeout(h);
+                    h = setTimeout(setUnitA, 300);
+                }
+            }, false);
+            var setUnitA=function(){
+                doc.documentElement.style.fontSize = doc.documentElement.clientWidth/16 + 'px';
+            };
+            setUnitA();
+        })(window,document);
+    </script>
+</body>
+</html>
