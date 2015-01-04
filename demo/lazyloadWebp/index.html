@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>lazyloadWebp演示效果</title>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <img style="width:191px;height:120px;" class="lazy" data-original="http://fshxyz.qiniudn.com/upload/2014/08/23/NBnp9ehEOgxcwdUr.jpeg?imageView2/1/w/191/h/120/q/65" data-webp="http://fshxyz.qiniudn.com/upload/2014/08/23/NBnp9ehEOgxcwdUr.jpeg?imageView2/1/w/191/h/120/q/65/format/webp">
+        </li>
+        <li>
+            <img style="width:191px;height:120px;" class="lazy" data-original="http://fshxyz.qiniudn.com/upload/2014/08/23/NLWqIwDddkPvkXJA.jpeg?imageView2/1/w/191/h/120/q/65" data-webp="http://fshxyz.qiniudn.com/upload/2014/08/23/NLWqIwDddkPvkXJA.jpeg?imageView2/1/w/191/h/120/q/65/format/webp">
+        </li>
+        <li>
+            <img style="width:191px;height:120px;" class="lazy" data-original="http://fshxyz.qiniudn.com/upload/2014/08/23/P7mhN5L3rCnMRqy5.jpeg?imageView2/1/w/191/h/120/q/65" data-webp="http://fshxyz.qiniudn.com/upload/2014/08/23/P7mhN5L3rCnMRqy5.jpeg?imageView2/1/w/191/h/120/q/65/format/webp">
+        </li>
+        <li>
+            <img style="width:191px;height:120px;" class="lazy" data-original="http://fshxyz.qiniudn.com/upload/2014/08/23/F2Prn3dSnI3D2U5k.jpeg?imageView2/1/w/191/h/120/q/65" data-webp="http://fshxyz.qiniudn.com/upload/2014/08/23/F2Prn3dSnI3D2U5k.jpeg?imageView2/1/w/191/h/120/q/65/format/webp">
+        </li>
+        <li>
+            <img style="width:191px;height:120px;" class="lazy" data-original="http://fshxyz.qiniudn.com/upload/2014/08/23/ekPSIAQhQ4BGmTQt.jpeg?imageView2/1/w/191/h/120/q/65" data-webp="http://fshxyz.qiniudn.com/upload/2014/08/23/ekPSIAQhQ4BGmTQt.jpeg?imageView2/1/w/191/h/120/q/65/format/webp">
+        </li>
+        <li>
+            <img style="width:191px;height:120px;" class="lazy" data-original="http://fshxyz.qiniudn.com/upload/2014/08/23/71GZmdlMgUp7CV6z.jpeg?imageView2/1/w/191/h/120/q/65" data-webp="http://fshxyz.qiniudn.com/upload/2014/08/23/71GZmdlMgUp7CV6z.jpeg?imageView2/1/w/191/h/120/q/65/format/webp">
+        </li>
+        <li>
+            <img style="width:191px;height:120px;" class="lazy" data-original="http://fshxyz.qiniudn.com/upload/2014/08/23/H4wQTPgD3NdDb0nF.jpeg?imageView2/1/w/191/h/120/q/65" data-webp="http://fshxyz.qiniudn.com/upload/2014/08/23/H4wQTPgD3NdDb0nF.jpeg?imageView2/1/w/191/h/120/q/65/format/webp">
+        </li>
+        <li>
+            <img style="width:191px;height:120px;" class="lazy" data-original="http://fshxyz.qiniudn.com/upload/2014/08/23/pV7Lpi4Z5FZSgN7J.jpeg?imageView2/1/w/191/h/120/q/65" data-webp="http://fshxyz.qiniudn.com/upload/2014/08/23/pV7Lpi4Z5FZSgN7J.jpeg?imageView2/1/w/191/h/120/q/65/format/webp">
+        </li>
+    </ul>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1.11.2/jquery.min.js"></script>
+    <script src="jquery.lazyloadWebp.js"></script>
+    <script>
+        $(function () {
+            $("img.lazy").lazyloadWebp({
+                effect: "fadeIn"
+            });
+        });
+    </script>
+</body>
+
+</html>
