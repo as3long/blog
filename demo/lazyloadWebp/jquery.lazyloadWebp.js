@@ -16,13 +16,6 @@
 (function($, window, document, undefined) {
     var $window = $(window);
     var webpSupport=false;
-    (function(){
-            // native support check
-            var t = new Image;
-            t.onload=function(){webpSupport=true;}
-            t.onerror = function(){webpSupport=false;}
-            t.src = "data:image/webp;base64,UklGRjAAAABXRUJQVlA4ICQAAACyAgCdASoBAAEALy2Wy2WlpaWlpYEsSygABc6zbAAA/upgAAA=";
-    })();
     $.fn.lazyloadWebp = function(options) {
         var elements = this;
         var $container;
@@ -168,7 +161,14 @@
 
         /* Force initial check if images should appear. */
         $(document).ready(function() {
-            update();
+                (function(){
+                // native support check
+                var t = new Image;
+                t.onload=function(){webpSupport=true; update();}
+                t.onerror = function(){webpSupport=false; update();}
+                t.src = "data:image/webp;base64,UklGRjAAAABXRUJQVlA4ICQAAACyAgCdASoBAAEALy2Wy2WlpaWlpYEsSygABc6zbAAA/upgAAA=";
+        })();
+            //update();
         });
 
         return this;
