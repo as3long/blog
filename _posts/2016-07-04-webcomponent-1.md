@@ -25,12 +25,15 @@ webcomponent是一个新的浏览器功能,为web提供了一个标准组件模�
 <input type="range">
 ```
 打开Chrome的开发者工具，点击右上角的"Settings"按钮，
+
 ![设置按钮](http://git.360rush.com/assets/img/shadowDom/settings.png)
 
 勾选“Show user agent shadow DOM”，
+
 ![勾选“Show user agent shadow DOM”](http://git.360rush.com/assets/img/shadowDom/show-user-angent-shadow-DOM.png)
 
 你就可以看到range组件的DOM结构的细节。
+
 ![range shadow-root](http://git.360rush.com/assets/img/shadowDom/range-shadow-root.png)
 
 看到标灰的 #shadow-root 了吗？这里就是所有视频播放器控制组件的所在之处。浏览器之所以将其置灰，是为了表明这部分是在 shadow DOM 里，对于页面的其他部分来说它是不可用的。这里的不可用意味着你写的 CSS 选择器和 JavaScript 代码都不会影响到这部分内容。
@@ -101,6 +104,7 @@ webcomponent是一个新的浏览器功能,为web提供了一个标准组件模�
 </body>
 </html>
 ```
+
 ![content selector](http://git.360rush.com/assets/img/shadowDom/contentSelector.png)
 
 这里要用到`<content>`标签的`select`属性。为了方便这里直接用script标签做模板。可以看到对应的标签映射到了select选择器对应的位置
