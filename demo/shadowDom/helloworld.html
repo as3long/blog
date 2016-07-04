@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shadow DOM -- Hello World</title>
+</head>
+<body>
+    <helloworld>你好Shadow DOM!</helloworld>
+    <script>
+        var host = document.querySelector('helloworld');
+        var shadowRoot = host.createShadowRoot();
+        var dom = document.createElement('p');
+        dom.innerHTML = '《<content></content>》';
+        shadowRoot.appendChild(dom);
+    </script>
+</body>
+</html>

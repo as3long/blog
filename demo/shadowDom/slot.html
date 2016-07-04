@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shadow DOM -- slot</title>
+</head>
+<body>
+    <helloworld>
+        <span slot="name">lonnyhuang</span>
+        <span slot="sex">男</span>
+        <span slot="city">深圳</span>
+    </helloworld>
+    <script type="tpl" class="sd-helloworld">
+        <style>
+            p {
+                line-height: 20px;
+                margin: 0;
+            }
+        </style>
+        <p>姓名：<slot name="name"></slot></p>
+        <p>性别：<slot name="sex"></slot></p>
+        <p>所在城市：<slot name="city"></slot></p>
+    </script>
+    <script>
+        var host = document.querySelector('helloworld');
+        var shadowRoot = host.createShadowRoot();
+        shadowRoot.innerHTML = document.querySelector('.sd-helloworld').innerHTML;
+    </script>
+</body>
+</html>
