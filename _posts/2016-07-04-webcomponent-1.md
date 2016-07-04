@@ -67,6 +67,7 @@ webcomponent是一个新的浏览器功能,为web提供了一个标准组件模�
 ![hello world](http://git.360rush.com/assets/img/shadowDom/helloworld.png)
 
 我们在helloworld中使用`<content>`标签,它的作用是在Shadow DOM中使用宿主的内容。
+
 > 小明： 这有啥用啊？ 我能只显示其中一部分的内容吗？
 
 答案是可以得，我们来看看下面的例子
