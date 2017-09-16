@@ -26,22 +26,22 @@ webcomponent是一个新的浏览器功能,为web提供了一个标准组件模�
 ```
 打开Chrome的开发者工具，点击右上角的"Settings"按钮，
 
-![设置按钮](http://git.360rush.com/assets/img/shadowDom/settings.png)
+![设置按钮](http://as3long.github.io/blog/assets/img/shadowDom/settings.png)
 
 勾选“Show user agent shadow DOM”，
 
-![勾选“Show user agent shadow DOM”](http://git.360rush.com/assets/img/shadowDom/show-user-angent-shadow-DOM.png)
+![勾选“Show user agent shadow DOM”](http://as3long.github.io/blog/assets/img/shadowDom/show-user-angent-shadow-DOM.png)
 
 你就可以看到range组件的DOM结构的细节。
 
-![range shadow-root](http://git.360rush.com/assets/img/shadowDom/range-shadow-root.png)
+![range shadow-root](http://as3long.github.io/blog/assets/img/shadowDom/range-shadow-root.png)
 
 看到标灰的 #shadow-root 了吗？这里就是所有视频播放器控制组件的所在之处。浏览器之所以将其置灰，是为了表明这部分是在 shadow DOM 里，对于页面的其他部分来说它是不可用的。这里的不可用意味着你写的 CSS 选择器和 JavaScript 代码都不会影响到这部分内容。
 
 ## 必须的HelloWorld
 
 可以戳这里
-[http://git.360rush.com/demo/shadowDom/helloworld.html](http://git.360rush.com/demo/shadowDom/helloworld.html)
+[http://as3long.github.io/blog/demo/shadowDom/helloworld.html](http://as3long.github.io/blog/demo/shadowDom/helloworld.html)
 
 ```
 <!DOCTYPE html>
@@ -64,14 +64,14 @@ webcomponent是一个新的浏览器功能,为web提供了一个标准组件模�
 ```
 结果是这样子的
 
-![hello world](http://git.360rush.com/assets/img/shadowDom/helloworld.png)
+![hello world](http://as3long.github.io/blog/assets/img/shadowDom/helloworld.png)
 
 我们在helloworld中使用`<content>`标签,它的作用是在Shadow DOM中使用宿主的内容。
 
 > 小明： 这有啥用啊？ 我能只显示其中一部分的内容吗？
 
 答案是可以得，我们来看看下面的例子
-[http://git.360rush.com/demo/shadowDom/contentSelector.html](http://git.360rush.com/demo/shadowDom/contentSelector.html)
+[http://as3long.github.io/blog/demo/shadowDom/contentSelector.html](http://as3long.github.io/blog/demo/shadowDom/contentSelector.html)
 
 ```
 <!DOCTYPE html>
@@ -106,7 +106,7 @@ webcomponent是一个新的浏览器功能,为web提供了一个标准组件模�
 </html>
 ```
 
-![content selector](http://git.360rush.com/assets/img/shadowDom/contentSelector.png)
+![content selector](http://as3long.github.io/blog/assets/img/shadowDom/contentSelector.png)
 
 这里要用到`<content>`标签的`select`属性。为了方便这里直接用script标签做模板。可以看到对应的标签映射到了select选择器对应的位置
 

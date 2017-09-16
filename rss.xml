@@ -5,8 +5,8 @@ layout: nil
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>黄龙的github博客</title>
-    <link>http://git.360rush.com</link>
-    <atom:link href="http://git.360rush.com/rss.xml" rel="self" type="application/rss+xml" />
+    <link>http://as3long.github.io/blog</link>
+    <atom:link href="http://as3long.github.io/blog/rss.xml" rel="self" type="application/rss+xml" />
     <description>黄龙的github博客，记录一些东西。方便查找</description>
     <language>zh_CN</language>
     <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
@@ -15,10 +15,10 @@ layout: nil
     {% for post in site.posts limit:10 %}
     <item>
       <title>{{ post.title }}</title>
-      <link>http://git.360rush.com{{ post.url }}</link>
+      <link>http://as3long.github.io/blog{{ post.url }}</link>
       <pubDate>{{ post.date | date_to_string }}</pubDate>
       <author>place_your_name_here</author>
-      <guid>http://git.360rush.com{{ post.id }}</guid>
+      <guid>http://as3long.github.io/blog{{ post.id }}</guid>
       <description>{{ post.content | xml_escape }}</description>
     </item>
     {% endfor %}
