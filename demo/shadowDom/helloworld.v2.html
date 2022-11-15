@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shadow DOM -- Hello World</title>
+</head>
+<body>
+    <hello-world>你好Shadow DOM!</hello-world>
+    <script>
+        class HelloWorld extends HTMLElement {
+            constructor() {
+                super();
+                var shadowRoot = this.attachShadow({mode: 'open'});
+                var dom = document.createElement('p');
+                dom.innerHTML = `《${this.innerHTML}》`;
+                shadowRoot.appendChild(dom)
+            }
+        }
+        customElements.define('hello-world', HelloWorld);
+    </script>
+</body>
+</html>

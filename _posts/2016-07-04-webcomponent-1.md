@@ -41,7 +41,7 @@ webcomponent是一个新的浏览器功能,为web提供了一个标准组件模�
 ## 必须的HelloWorld
 
 可以戳这里
-[http://as3long.github.io/blog/demo/shadowDom/helloworld.html](http://as3long.github.io/blog/demo/shadowDom/helloworld.html)
+[http://as3long.github.io/blog/demo/shadowDom/helloworld.v2.html](http://as3long.github.io/blog/demo/shadowDom/helloworld.v2.html)
 
 ```
 <!DOCTYPE html>
@@ -51,13 +51,18 @@ webcomponent是一个新的浏览器功能,为web提供了一个标准组件模�
     <title>Shadow DOM -- Hello World</title>
 </head>
 <body>
-    <div class="hi">你好Shadow DOM!</div>
+    <hello-world>你好Shadow DOM!</hello-world>
     <script>
-        var hi = document.querySelector('.hi');
-        var shadowRoot = hi.createShadowRoot();
-        var dom = document.createElement('p');
-        dom.innerHTML = '《<content></content>》';
-        shadowRoot.appendChild(dom);
+        class HelloWorld extends HTMLElement {
+            constructor() {
+                super();
+                var shadowRoot = this.attachShadow({mode: 'open'});
+                var dom = document.createElement('p');
+                dom.innerHTML = `《${this.innerHTML}》`;
+                shadowRoot.appendChild(dom)
+            }
+        }
+        customElements.define('hello-world', HelloWorld);
     </script>
 </body>
 </html>
